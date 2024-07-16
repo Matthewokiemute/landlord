@@ -30,7 +30,7 @@ export default function Header() {
           <Link to="/about">
             <li className="hidden sm:inline text-slate-800 hover:text-slate-600">About us</li>
           </Link>
-          <Link to="/login">
+          <Link to={`${currentUser ? "/profile" : "/login"}`}>
             {currentUser ? (
               <li className="flex items-center gap-1  text-slate-800 hover:bg-gray-200 hover:rounded-full p-2 transition-all ease-in-out duration-500">
               <img
